@@ -52,7 +52,8 @@
 
 				<div class="checkbox"  ng-repeat="todo in todos">
                                   <label>
-                                  <input  type="checkbox" ng-model="todo.confirmed" ng-change="todoDone(todo._id, todo.confirmed)" > <span class="done-{{todo.done}}">{{ todo.text }}</span>
+
+                                  <input  type="checkbox" ng-checked="todo.done" ng-model="todo.confirmed" ng-change="todoDone(todo._id, todo.confirmed)" > <span class="done-{{todo.done}}">{{ todo.text }}</span>
                                   </label>
 																	<button class="pull-right" ng-click="deleteTodo(todo._id)" > delete</button>
         </div>
@@ -71,7 +72,7 @@
 					<div class="form-group">
 
 						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-						<input type="text" class="form-control input-lg text-center" placeholder="I want to buy a puppy" ng-model="formData.text">
+						<input type="text"  class="form-control input-lg text-center" placeholder="I want to buy a puppy" ng-model="formData.text">
 					</div>
 
 					<!-- createToDo() WILL CREATE NEW TODOS -->

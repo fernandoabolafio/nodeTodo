@@ -52,6 +52,7 @@ angular.module('todoController', [])
 		$scope.todoDone = function(id,done){
 			console.log(done);
 
+
 			Todos.update(id, done)
 
 			.success(function(data){
